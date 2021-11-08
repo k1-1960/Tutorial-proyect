@@ -5,6 +5,8 @@ const Discord = require('discord.js');
 const { Collection } = require('discord.js');
 const client = new Discord.Client({ intents: 32735 });
 
+//los números en los intents valen por todos los intents
+
 //↑ Necesario //
 
 client.commands = new Collection();
