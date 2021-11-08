@@ -1,0 +1,20 @@
+{
+  "files": {
+    ".replit": [
+      {
+        "id": "82bfe94b-7322-41a1-a8e9-2fe1b088a2b2",
+        "line": 1,
+        "version": 16,
+        "index": 0
+      }
+    ],
+    "package-lock.json": [
+      {
+        "id": "3ffcd0f9-1141-479b-8fb0-fa839941d4fe",
+        "line": 19,
+        "version": 1,
+        "index": 561
+      }
+    ]
+  }
+}
