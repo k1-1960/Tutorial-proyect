@@ -49,6 +49,15 @@ for (const file of NcommandFiles) {
 	client.commands.set(command.name, command);
 }
 
+const McommandFiles = fs
+	.readdirSync('./comandos/mod')
+	.filter(file => file.endsWith('.js'));
+
+for (const file of McommandFiles) {
+	const command = require(`./comandos/mod/${file}`);
+	client.commands.set(command.name, command);
+}
+
 // ↓ Event Handler //
 
 const { readdirSync } = require('fs');
@@ -62,6 +71,18 @@ const evento = require(path.join(__dirname, 'eventos', file));
 client.on(evento.name, (...args) => evento.run(client, ...args));
 }
 
+const invites = require('discord-invites13');
+invites.loggerSetup(client);
+
+   client.on('messageCreate', message => { 
+         if(message.content === '$join'){ 
+        client.emit('guildMemberAdd', message.member);
+ } 
+ });
+
+
+
+					
 //↓ Client login //
 
 client.login(process.env.TOKEN);

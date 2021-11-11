@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const db = require('megadb');
 const dinero = new db.crearDB('dinero');
 
-let cooldown = new Set();
+var cooldown = new Set();
 
 module.exports = {
 	name: 'work',
@@ -11,17 +11,17 @@ module.exports = {
 execute (client, message, args) {
 
 if(cooldown.has(message.author.id)){
-	message.reply({ content: "Debes esperar 15 min después de el último uso." })
+	message.reply('Debes esperar 15 minutos para usar este comando');
 
-	return;
+return;
 }
 
 	cooldown.add(message.author.id);
 
 	setTimeout(() => {
-		cooldown.delete()
-	}, 900000);
-
+		cooldown.delete(message.author.id)
+	}, 5000);
+	
 	if(!dinero.tiene(message.author.id)) {
    dinero.establecer(message.author.id, `0`)
 	}
