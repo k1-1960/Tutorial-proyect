@@ -26,7 +26,9 @@ if(args[0] === "all"){
 		if(cantidad > total){
 			return message.reply(`No puedes depositar mas de lo que tienes.`)
 		}
-
+                if(cantidad < 0){
+                 return message.reply(`La cantidad debe ser mayor a 0`)
+}
 		if(cantidad === 0){
 			return message.reply(`La cantidad debe ser mayor a 0`)
 		}
