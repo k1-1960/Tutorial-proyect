@@ -1,5 +1,5 @@
-# Tutorial-proyect
-Repositorio del proyecto Tutorial YouTube!
+# Tutorial-proyect 2021 s-1
+Repositorio del proyecto Tutorial YouTube! -- Discord.js v13
 
 # <a><img src="https://emoji.gg/assets/emoji/4623-pixel-symbol-question.png" width="34px" height="34px" alt="pixel_symbol_question" align="center"> Esto de donde salió?</a>
 

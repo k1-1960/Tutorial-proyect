@@ -1,29 +1,26 @@
 const Discord = require('discord.js');
 const db = require('megadb');
-const dinero = new db.crearDB('dinero');
-
+const dinero = new db.crearDB('dinero_s');
 var cooldown = new Set();
 
 module.exports = {
-	name: 'work',
-	alias: ['job'],
+	name: 'work-s',
+	alias: ['job-s'],
 
 execute (client, message, args) {
 
-if(cooldown.has(message.author.id)){
-	message.reply('Debes esperar 15 minutos para usar este comando');
+var utoken = `${message.guild.id}${message.author.id}`;
+  
+if(cooldown.has(utoken)) return message.reply("Tienes que esperar 15 minutos desde el último uso para volver a usar este comando.");
 
-return;
-}
+  cooldown.add(utoken);
 
-	cooldown.add(message.author.id);
-
-	setTimeout(() => {
-		cooldown.delete(message.author.id)
-	}, 5000);
-	
-	if(!dinero.tiene(message.author.id)) {
-   dinero.establecer(message.author.id, `0`)
+  setTimeout(() => {
+    cooldown.delete(utoken)
+  }, 900000);
+  
+	if(!dinero.tiene(utoken)) {
+   dinero.establecer(utoken, `0`)
 	}
 
 var jobs = [
@@ -42,7 +39,7 @@ var rjobs = jobs[Math.floor(Math.random() * jobs.length)];
 
 message.reply({ embeds: [embed] })
 
-dinero.sumar(message.author.id, `${gana}`);
+dinero.sumar(utoken, `${gana}`);
 
   }
 }

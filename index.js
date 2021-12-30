@@ -70,18 +70,6 @@ const evento = require(path.join(__dirname, 'eventos', file));
 
 client.on(evento.name, (...args) => evento.run(client, ...args));
 }
-
-const invites = require('discord-invites13');
-invites.loggerSetup(client);
-
-   client.on('messageCreate', message => { 
-         if(message.content === '$join'){ 
-        client.emit('guildMemberAdd', message.member);
- } 
- });
-
-
-
 					
 //↓ Client login //
 
