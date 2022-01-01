@@ -14,7 +14,7 @@ if(cooldown.has(message.author.id)) return message.reply("Tienes que esperar 15 
   cooldown.add(message.author.id);
 
   setTimeout(() => {
-    cooldown.delete(message.author)
+    cooldown.delete(message.author.id)
   }, 900000);
   
 	if(!dinero.tiene(message.author.id)) {
