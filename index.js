@@ -67,10 +67,12 @@ const eventos = readdirSync(path.join(__dirname, 'eventos'));
 
 for(const file of eventos){
 const evento = require(path.join(__dirname, 'eventos', file));
-
+ try {
 client.on(evento.name, (...args) => evento.run(client, ...args));
+} catch (err) {
+  console.log(err);
 }
-					
+}
 //↓ Client login //
 
 client.login(process.env.TOKEN);

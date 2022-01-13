@@ -18,6 +18,37 @@ Te puede servir en muchas cosas, como:
 
 Normalmente se actualiza después de cada tutorial, así que si se llegase a actualizar antes de un tutorial deberia de ser algun arreglo de bug.
 
+## Change log:
+### 12/01/2022: Anti-apagones por errores:
+Agregue una función propia, puedes encontrarla y usarla en la carpeta "/funciones_mias" como "send_error.js", para importarlo usa:
+```js
+const { send_error } = require('ruta/de/funcion'); // la ruta normalmente es './funciones_mias/send_error.js'
+```
+para usarla es:
+```js
+send_error(client, "ownerid", <error variable>);
+```
+ejemplo:
+```js
+const { send_error } = require('ruta/de/funcion');
+
+//en un try:
+try {
+  //Tu codigo aqui
+} catch (error) {
+  send_error(client, "123456789012345678", error);
+  return;
+}
+
+//en cualquier función. "funcionXd()"
+message.channel.send({ content: "algo xd" }).catch(err => {
+  send_error(client, "123456789012345678", error);
+});
+```
+
+parametros:\n
+`client` = el cliente de el bot.\n`ownerid` = id de el dueño o la persona a la que se enviara el mensaje de error\n`error` = variable de error.
+
 ### Medios:
 
 <a href="https://youtube.com/channel/UCIvJqm-ZU5CN0avff6vK_rg"><img src="https://emoji.gg/assets/emoji/3393-pettingyoutube.gif" width="24px" height="24px" alt="pettingYoutube" align="center"> Canal de YouTube!</a>
