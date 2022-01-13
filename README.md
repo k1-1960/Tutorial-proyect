@@ -41,7 +41,7 @@ try {
 }
 
 //en cualquier función. "funcionXd()"
-message.channel.send({ content: "algo xd" }).catch(err => {
+message.channel.send({ content: "algo xd" }).catch(error => {
   send_error(client, "123456789012345678", error);
 });
 ```
