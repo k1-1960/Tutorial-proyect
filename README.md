@@ -47,9 +47,9 @@ message.channel.send({ content: "algo xd" }).catch(error => {
 ```
 
 parametros:
-`client` = el cliente de el bot.
-`ownerid` = id de el dueño o la persona a la que se enviara el mensaje de error
-`error` = variable de error.
+- `client` = el cliente de el bot.
+- `ownerid` = id de el dueño o la persona a la que se enviara el mensaje de error
+- `error` = variable de error.
 
 ### Medios:
 
