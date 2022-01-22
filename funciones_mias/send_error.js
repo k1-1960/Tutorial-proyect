@@ -7,7 +7,7 @@ module.exports.send_error = async (client, owner, error) => {
   }]
  })
 } catch (err) {
- console.log("[SEND_ERROR] -- Owner con dm cerrado o id incorrecto");
+ console.log("[SEND_ERROR] -- Owner con dm cerrado o id incorrecto\n" + err);
 }
 
   return;
