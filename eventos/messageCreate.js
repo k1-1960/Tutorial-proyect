@@ -12,7 +12,7 @@ if(message.channel.type === 1) return;
       //obteniendo el prefix
 const { globalprefix } = require('../config.json');
 //declarando el prefix
-let prefix = globalprefix;
+let prefix = prefix_db.obtener(message.guild.id) || globalprefix;
 //si el autor es bot que no retorne nada.
 if(message.author.bot) return;
       //si el mensaje no empieza por el prefix que no retorne nada
