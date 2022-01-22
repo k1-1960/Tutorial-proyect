@@ -31,7 +31,7 @@ if(cmd) {
   //ejecutamos el comando
 	  cmd.execute(client, message, args)
       .catch(err => {
-      send_error(client, "838091364344397835", err);
+      send_error(client, "tuid", err);
         return;
         //↑ anti-apagones por errores en el comando (.catch)
     });
@@ -40,7 +40,7 @@ if(cmd) {
 
    }//cerramos "try"
     catch (err) {
-      send_error(client, "838091364344397835", err);
+      send_error(client, "tuid", err);
       return;
       //↑ anti-apagones por errores en el evento (.catch)
     } //cerramos "catch"
