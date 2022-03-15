@@ -53,6 +53,6 @@ parametros:
 
 ### Medios:
 
-<a href="https://youtube.com/channel/UCIvJqm-ZU5CN0avff6vK_rg"><img src="https://emoji.gg/assets/emoji/3393-pettingyoutube.gif" width="24px" height="24px" alt="pettingYoutube" align="center"> Canal de YouTube!</a>
+<a href="https://youtube.com/channel/UCIvJqm-ZU5CN0avff6vK_rg"><img src="https://emoji.gg/assets/emoji/3393-pettingyoutube.gif" width="24px" height="24px" alt="pettingYoutube" align="center"> Canal de YouTube! </a>
 
 <a href="https://discord.gg/34cU9Rnurd"><img src="https://emoji.gg/assets/emoji/1600-pettingdiscord.gif" width="24px" height="24px" alt="pettingDiscord" align="center"> Servidor de Discord :)</a>
